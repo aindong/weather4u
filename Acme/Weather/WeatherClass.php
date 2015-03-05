@@ -1,4 +1,4 @@
-<?php namespace Acme\Weather\WeatherClass;
+<?php namespace Acme\Weather;
 
 class WeatherClass {
 

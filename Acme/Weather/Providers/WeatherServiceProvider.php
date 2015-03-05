@@ -1,4 +1,4 @@
-<?php namespace Acme\Weather\Providers\WeatherServiceProvider;
+<?php namespace Acme\Weather\Providers;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
@@ -18,7 +18,7 @@ class WeatherServiceProvider extends ServiceProvider {
         $this->app->booting(function()
         {
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('WeatherClass', 'Acme\Weather\Facades\WeatherClass');
+            $loader->alias('Weather', 'Acme\Weather\Facades\WeatherClass');
         });
     }
 }

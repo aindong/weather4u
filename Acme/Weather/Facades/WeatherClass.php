@@ -1,4 +1,4 @@
-<?php namespace Acme\Weather\Facades\WeatherClass;
+<?php namespace Acme\Weather\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
