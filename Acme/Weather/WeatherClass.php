@@ -10,12 +10,17 @@ class WeatherClass {
     public function getWeatherByCity($city)
     {
         // Build the request url
-        $this->requestUrl = URL . '?q=' . $city;
+        $this->requestUrl = self::URL . '?q=' . $city . '&APPID=' . self::APPID;
 
         // Throw the request
         $request = $this->request($this->requestUrl);
 
-        return json_encode($request);
+        $data = [
+            'request' => $this->requestUrl,
+            'data'  => $request
+        ];
+
+        return $data;
     }
 
     /**
@@ -40,6 +45,6 @@ class WeatherClass {
         // Close the connection
         curl_close($curl);
 
-        return $result;
+        return json_decode($result);
     }
 }
