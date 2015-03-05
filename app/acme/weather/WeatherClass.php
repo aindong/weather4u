@@ -2,4 +2,9 @@
 
 class WeatherClass {
 
+    public function sayHello()
+    {
+        echo 'Hello';
+    }
+
 }
