@@ -31,6 +31,9 @@
                         <h1 class="uppercase">Weather Information</h1>
                         <p>Weather: {{ $weather->data->weather[0]->main }}</p>
                         <p>Description: {{ $weather->data->weather[0]->description }}</p>
+
+                        <hr/>
+                        <p>Temperature: {{ ((float)$weather->data->main->temp - 273.15) * 1.8000 + 32.00 }} Fahrenheit</p>
                     @else
                         ERROR ON REQUEST with REQUEST OF : {{ $weather->request }}
                     @endif
